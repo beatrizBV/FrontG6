@@ -2,7 +2,7 @@
 
 function getCategoria (){
     $.ajax({
-        url:"http://129.159.37.204:8080/api/Category/all",
+        url:"http://138.2.239.155:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -24,7 +24,7 @@ function postCategoria(){
         description:$("#description").val()
     };
     $.ajax({
-        url:"http://129.159.37.204:8080/api/Category/save",
+        url:"http://138.2.239.155:8080/api/Category/save",
         type:"POST",
         datatype:"JSON",
         contentType:"application/json; charset=utf-8",
@@ -50,7 +50,7 @@ function putCategoria(idDesdeBoton){
         description:$("#description").val()
     };
     $.ajax({
-        url:"http://129.159.37.204:8080/api/Category/update",
+        url:"http://138.2.239.155:8080/api/Category/update",
         type:"PUT",
         datatype:"JSON",
         contentType:"application/json",
@@ -72,7 +72,7 @@ function deleteCategoria(idDesdeBoton){
         id:idDesdeBoton
     };
     $.ajax({
-        url:"http://129.159.37.204:8080/api/Category/"+idDesdeBoton,
+        url:"http://138.2.239.155:8080/api/Category/"+idDesdeBoton,
         type:"DELETE",
         datatype:"JSON",
         data: JSON.stringify(myData),

@@ -2,36 +2,62 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script type="text/javascript" src="js/reportes.js"></script>  
+        <script type="text/javascript" src="js/reportes.js"></script> 
+        <script src="https://cdn.tailwindcss.com"></script>  
     </head>
     <body>
-        <h1>Reportes</h1>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="categoria.html">Categoria</a></li>
-            <li><a href="machine.html">Maquina</a></li>
-            <li><a href="cliente.html">Clientes</a></li>
-            <li><a href="mensajes.html">Mensajes</a></li>
-            <li><a href="reservaciones.html">Reservaciones</a></li>
-        </ul>
-    </body>
+        <nav class="bg-gradient-to-r from-sky-400 to-blue-900 ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+                  </div>
+                  <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="index.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Inicio</a>
+        
+                      <a href="machine.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Maquinas</a>
+        
+                      <a href="cliente.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
+        
+                      <a href="mensajes.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mensajes</a>
+        
+                      <a href="reservaciones.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservaciones</a>
+                    
+                      <a href="reportes.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reportes</a>
+                   
+                    </div>
+                  </div>
+                </div>
+              
+             
+              </div>
+            </div>
+          
+            </div>
+          </nav>
+    
 
-    <button onclick="traerReporteStatus()">
-        Crear Reporte Status Reservaciónes
-    </button>
-    <div id="resultado1"></div>
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Reportes</h1>
+            
+          </div>
+          <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+           
+            <button onclick="traerReporteStatus()" class="text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Crear Reportes Status Reservaciones</button>
+            <button onclick="traerReportesFechas()" class="text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Crear Reportes Fechas Reservaciones</button>
+            <button onclick="traerReportesClientes()" class="text-white bg-sky-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Crear Reportes Clienetes Reservaciones</button>
+            <div id="resultado3"></div> 
+        </div>
+        </div>
+      </section>
 
-
-    <button onclick="traerReportesFechas()">
-        Crear Reporte Fechas Reservaciónes
-    </button><br>
-
-    <button onclick="traerReportesClientes()">
-        Crear Reporte Clientes Reservaciónes
-    </button><br>
-
-
-
-
+      <div id="resultado1"></div>
+      <div id="resultado2"></div>
+      <div id="resultado3"></div>
 
 </html>
